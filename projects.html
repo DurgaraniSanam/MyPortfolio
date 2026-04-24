@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <h2 class="title">My Projects</h2>
+
+    <div class="project-grid">
+
+      <!-- PROJECT 1 -->
+      <div class="card">
+        <h3>Air Pollution Based Health Risk Prediction with RAG Explainability</h3>
+        <div class="card-content">
+          <p>
+            AI-based system that analyzes air pollution and weather data to predict health risk levels.
+            Includes a RAG-based explainability feature that shows why a certain risk level is predicted,
+            helping users understand the results in a simple way.
+          </p>
+        </div>
+        <div class="card-buttons">
+          <a href="https://github.com/YOUR_GITHUB_LINK1" class="btn" target="_blank">View on GitHub <i
+              class="fa-brands fa-github"></i></a>
+          <a href="" class="btn" target="_blank"><i class="fa-solid fa-link"></i></a>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="card">
+        <h3>AI MoodMate</h3>
+        <div class="card-content">
+          <p>
+            Emotion detection and music recommendation system that uses computer vision and NLP.
+            Detects user mood through facial expressions and suggests songs based on the detected emotion
+            using machine learning models.
+          </p>
+        </div>
+        <div class="card-buttons">
+          <a href="https://github.com/YOUR_GITHUB_LINK2" class="btn" target="_blank">View on GitHub <i
+              class="fa-brands fa-github"></i></a>
+          <a href="" class="btn" target="_blank"><i class="fa-solid fa-link"></i></a>
+        </div>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="card">
+        <h3>Donation Portal using Django</h3>
+        <div class="card-content">
+          <p>
+
+            Full-stack donation management web application built with Django.
+            Allows users to donate to causes securely with login authentication,
+            admin dashboard, and simple user-friendly interface.
+          </p>
+        </div>
+        <div class="card-buttons">
+          <a href="https://github.com/YOUR_GITHUB_LINK3" class="btn" target="_blank">View on GitHub <i
+              class="fa-brands fa-github"></i></a>
+          <a href="" class="btn" target="_blank"><i class="fa-solid fa-link"></i></a>
+        </div>
+      </div>
+
+      <!-- PROJECT 4 -->
+      <div class="card">
+        <h3>Stduent Hub</h3>
+        <div class="card-content">
+          <p>
+            A student-focused web platform designed to simplify campus life by bringing useful tools
+            and information into one place. Includes features like announcements, resources, and
+            basic student utilities to help students stay organized and connected.
+          </p>
+        </div>
+        <div class="card-buttons">
+          <a href="https://github.com/YOUR_GITHUB_LINK4" class="btn" target="_blank">View on GitHub <i
+              class="fa-brands fa-github"></i></a>
+          <a href="" class="btn" target="_blank"><i class="fa-solid fa-link"></i></a>
+        </div>
+      </div>
+
+      <!-- PROJECT 5 -->
+      <div class="card">
+        <h3>Crack Prediction System</h3>
+        <div class="card-content">
+          <p>
+            Deep learning project that detects structural cracks in walls and materials using image data.
+            Built a CNN-based model with TensorFlow and OpenCV to identify cracks and support
+            automated quality inspection.
+          </p>
+        </div>
+        <div class="card-buttons">
+          <a href="https://github.com/YOUR_GITHUB_LINK5" class="btn" target="_blank">View on GitHub <i
+              class="fa-brands fa-github"></i></a>
+          <a href="" class="btn" target="_blank"><i class="fa-solid fa-link"></i></a>
+        </div>
+      </div>
+
+      <!-- PROJECT 6 -->
+      <div class="card">
+
+        <h3>Portfolio Website</h3>
+        <div class="card-content">
+          <p>
+            Personal responsive portfolio website built using HTML, CSS, and JavaScript
+            to showcase projects, skills, and contact information in a clean and simple layout.
+          </p>
+        </div>
+        <div class="card-buttons">
+          <a href="https://github.com/YOUR_GITHUB_LINK5" class="btn" target="_blank">View on GitHub <i
+              class="fa-brands fa-github"></i></a>
+          <a href="" class="btn" target="_blank"><i class="fa-solid fa-link"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <script>
+      fetch("header.html")
+        .then(res => {
+          if (!res.ok) throw new Error("header.html not found");
+          return res.text();
+        })
+        .then(data => {
+          document.getElementById("header").innerHTML = data;
+        })
+        .catch(err => console.error("Header load error:", err));
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Skills</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <section class="skills-section">
+
+      <h1 class="title">SKILLS</h1>
+      <div class="skills-line"></div>
+
+      <div class="skills-container">
+
+        <!-- PROGRAMMING -->
+        <div class="skills-card">
+          <h2>PROGRAMMING LANGUAGES</h2>
+
+          <div class="skills-icons">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+          </div>
+
+        </div>
+
+        <!-- WEB DEV -->
+        <div class="skills-card">
+          <h2>WEB DEVELOPMENT</h2>
+
+          <div class="skills-icons">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg">
+          </div>
+
+        </div>
+
+        <!-- DATABASE -->
+        <div class="skills-card bottom-card">
+          <h2>DATABASES</h2>
+
+          <div class="skills-icons">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg">
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+      fetch("header.html")
+        .then(res => {
+          if (!res.ok) throw new Error("header.html not found");
+          return res.text();
+        })
+        .then(data => {
+          document.getElementById("header").innerHTML = data;
+        })
+        .catch(err => console.error("Header load error:", err));
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+            rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div id="header"></div>
+        <section class="education-section">
+
+            <h2 class="edu-title">Education</h2>
+
+            <div class="edu-container">
+
+                <!-- COLLEGE -->
+                <div class="edu-card">
+                    <h3>B.Tech – Information Technology</h3>
+                    <p class="edu-college">Andhra Loyola Institute of Engineering & Technology</p>
+                    <p class="edu-year">2022 – 2026</p>
+                    <p class="edu-percent">CGPA: 8.8</p>
+                </div>
+
+                <!-- INTERMEDIATE -->
+                <div class="edu-card">
+                    <h3>Intermediate (MPC)</h3>
+                    <p class="edu-college">Triveni Junior College</p>
+                    <p class="edu-year">2020 – 2022</p>
+                    <p class="edu-percent">Percentage: 95.8%</p>
+                </div>
+
+                <!-- SCHOOL -->
+                <div class="edu-card">
+                    <h3>SSC</h3>
+                    <p class="edu-college">Subhodaya E.M High School</p>
+                    <p class="edu-year">2019 – 2020</p>
+                    <p class="edu-percent">Percentage: 93%</p>
+                </div>
+
+            </div>
+
+        </section>
+        <script>
+            fetch("header.html")
+                .then(res => {
+                    if (!res.ok) throw new Error("header.html not found");
+                    return res.text();
+                })
+                .then(data => {
+                    document.getElementById("header").innerHTML = data;
+                })
+                .catch(err => console.error("Header load error:", err));
+        </script>
+    </body>
+
+</html>

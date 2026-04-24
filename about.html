@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>About</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <section class="about-section">
+
+      <div class="about-container">
+
+        <!-- LEFT IMAGE -->
+        <div class="about-img">
+          <img src="images/Profile.jpg" alt="profile">
+        </div>
+
+        <!-- RIGHT TEXT -->
+        <div class="about-content">
+
+          <h2 class="title">About Me</h2>
+
+          <p class="about-desc">
+            A Computer Science undergraduate with problem-solving skills and project experience,
+            looking forward to seeking an opportunity in the Software Engineering industry while
+            contributing to a dynamic team.
+          </p>
+
+          <p><b>Name:</b> Sanam Durga Rani</p>
+          <p><b>Age:</b> 20</p>
+          <p><b>Email:</b> sanamdurgarani2005@gmail.com</p>
+          <p><b>Country:</b> India</p>
+          <p><b>Role:</b> Software Developer</p>
+          <p><b>Languages:</b> English, Telugu, Hindi</p>
+          <p><b>Interests:</b> Reading, Yoga</p>
+
+          <div class="about-buttons">
+            <a href="achievements.html" class="about-btn">ACHIEVEMENTS</a>
+            <a href="education.html" class="about-btn">EDUCATION</a>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+    <script>
+      fetch("header.html")
+        .then(res => {
+          if (!res.ok) throw new Error("header.html not found");
+          return res.text();
+        })
+        .then(data => {
+          document.getElementById("header").innerHTML = data;
+        })
+        .catch(err => console.error("Header load error:", err));
+    </script>
+  </body>
+
+</html>

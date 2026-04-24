@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+            rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    </head>
+
+    <body>
+        <div id="header"></div>
+
+        <section class="hero">
+
+            <p class="hello">HELLO!</p>
+
+            <h1>
+                I'm <span class="name">Durga Rani Sanam</span>
+            </h1>
+
+            <p class="quote">
+                Love the process so much that the results no longer matter❤️‍🔥.
+            </p>
+
+            <!-- Dynamic typing text -->
+            <div class="typing">
+                <span id="typing-text"></span><span>|</span>
+            </div>
+            <p class="subtitle">
+                Pursuing my B.Tech Degree at Andhra Loyola Institute of Engineering and Technology, Vijayawada.
+            </p>
+            <p class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                Vijayawada, Andhra Pradesh, India
+            </p>
+            <div class="buttons">
+                <a href="https://github.com/DurgaraniSanam" class="btn">LINKEDIN</a>
+                <a href="#" class="btn">MY WORKS</a>
+            </div>
+            <div class="social">
+                <a href="https://github.com/DurgaraniSanam"><i class="fa-brands fa-github"></i></a>
+                <a href="http://www.linkedin.com/in/sanam-durga-rani-8a6917293"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:sanamdurgarani@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <i class="fa-solid fa-link"></i>
+            </div>
+        </section>
+        <script>
+            fetch("header.html")
+                .then(res => {
+                    if (!res.ok) throw new Error("header.html not found");
+                    return res.text();
+                })
+                .then(data => {
+                    document.getElementById("header").innerHTML = data;
+                })
+                .catch(err => console.error("Header load error:", err));
+        </script>
+        <script src="script.js"></script>
+    </body>
+
+</html>

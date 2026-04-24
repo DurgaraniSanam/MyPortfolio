@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <section class="contact-section">
+
+      <h1 class="contact-title">Contact Me</h1>
+      <p class="contact-sub">Below are the details to reach out to me!</p>
+
+      <div class="contact-grid">
+
+        <!-- ADDRESS -->
+        <div class="contact-card">
+          <i class="fa-solid fa-location-dot icon"></i>
+          <h3>ADDRESS</h3>
+          <p>Vijayawada, Andhra Pradesh, India</p>
+        </div>
+
+        <!-- PHONE -->
+        <div class="contact-card">
+          <i class="fa-solid fa-phone icon"></i>
+          <h3>CONTACT NUMBER</h3>
+          <p>+91 630 259 9226</p>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="contact-card">
+          <i class="fa-solid fa-envelope icon"></i>
+          <h3>EMAIL ADDRESS</h3>
+          <p>durgarani1204@gmail.com</p>
+        </div>
+
+        <!-- RESUME -->
+        <div class="contact-card">
+          <i class="fa-solid fa-globe icon"></i>
+          <h3>DOWNLOAD RESUME</h3>
+          <a href="#" class="resume-link">Click Here</a>
+        </div>
+
+      </div>
+
+      <h2 class="question">Have a Question?</h2>
+
+      <button class="contact-btn">Click Here</button>
+
+      <div class="find">
+        Find me on
+        <a href="http://www.linkedin.com/in/sanam-durga-rani-8a6917293"><i class="fa-brands fa-linkedin linkedin"></i></a>
+      </div>
+
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+      fetch("header.html")
+        .then(res => {
+          if (!res.ok) throw new Error("header.html not found");
+          return res.text();
+        })
+        .then(data => {
+          document.getElementById("header").innerHTML = data;
+        })
+        .catch(err => console.error("Header load error:", err));
+    </script>
+  </body>
+
+</html>

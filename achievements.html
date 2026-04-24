@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+            rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div id="header"></div>
+        <section class="achievement-section">
+
+<h2 class="title">Achievements🏆</h2>
+
+<div class="gallery">
+
+<!-- ITEM 1 -->
+<div class="ach-card">
+<img src="images/a1.jpeg" onclick="openImg(this.src)">
+<h3>First Prize – Quiz Competition</h3>
+<p>2023 • Epistemicon College Event</p>
+</div>
+
+<!-- ITEM 2 -->
+<div class="ach-card">
+<img src="images/a2.jpeg" onclick="openImg(this.src)">
+<h3>First Rank in Academics</h3>
+<p>March 2025 • Ventura 2K25 • IT Dept</p>
+</div>
+
+<!-- ITEM 3 -->
+<div class="ach-card">
+<img src="images/a3.jpg" onclick="openImg(this.src)">
+<h3>Web Development Internship</h3>
+<p>2024 • Oasis Infobyte</p>
+</div>
+
+<!-- ITEM 4 -->
+<div class="ach-card">
+<img src="images/a4.jpg" onclick="openImg(this.src)">
+<h3>AI Project Presentation</h3>
+<p>2025 • College Expo</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- popup -->
+<div id="popup" class="popup" onclick="closeImg()">
+<img id="popup-img">
+</div>
+        <script>
+            fetch("header.html")
+                .then(res => {
+                    if (!res.ok) throw new Error("header.html not found");
+                    return res.text();
+                })
+                .then(data => {
+                    document.getElementById("header").innerHTML = data;
+                })
+                .catch(err => console.error("Header load error:", err));
+        </script>
+    </body>
+
+</html>

@@ -1,7 +1,10 @@
 const texts = [
-  "IT Undergraduate",
-  "Aspiring Django Developer",
-  "AI/ML  Enthiusiast",
+  "IT Graduate",
+  "Cyber Security Enthusiast"
+  "SOC Analyst Aspirant"
+  "AI Learner"
+  "Problem Solver"
+  "Open to Opportunities"
 ];
 
 let i = 0;

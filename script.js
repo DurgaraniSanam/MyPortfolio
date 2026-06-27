@@ -3,8 +3,6 @@ const texts = [
   "Cyber Security Enthusiast"
   "SOC Analyst Aspirant"
   "AI Learner"
-  "Problem Solver"
-  "Open to Opportunities"
 ];
 
 let i = 0;
